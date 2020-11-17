@@ -42,7 +42,7 @@ sudo mkdir -p $dbs
 # write it to the user in question
 sudo chown $USER $dbs
 # support for hook architecture in bash call outs
-hooksdir="${dir}/scripts/hooks/pull-down"
+hooksdir="/var/www/elmsln/custom/scripts/hooks/pull-down"
 
 # hook pre-pull-down.sh
 if [ -f  $hooksdir/pre-pull-down.sh ]; then

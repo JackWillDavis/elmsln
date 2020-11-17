@@ -108,7 +108,7 @@ done
 moduledir=$elmsln/config/shared/drupal-${core}/modules/_elmsln_scripted
 cissettings=${university}_${host}_settings
 # support for hook architecture in bash call outs
-hooksdir=$configsdir/scripts/hooks/elmsln-install
+hooksdir=/var/www/elmsln/custom/scripts/hooks/elmsln-install
 
 # used for random password generation
 COUNTER=0

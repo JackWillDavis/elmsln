@@ -96,7 +96,7 @@ do
 done
 
 # support for hook architecture in bash call outs
-hooksdir=$configsdir/scripts/hooks/elmsln-install
+hooksdir=/var/www/elmsln/custom/scripts/hooks/elmsln-install
 
 # used for random password generation
 COUNTER=0
