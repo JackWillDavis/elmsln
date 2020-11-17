@@ -112,7 +112,13 @@ $conf['session_inc'] = 'sites/all/modules/ulmus/apdqc/apdqc.session.inc';
 ini_set('error_reporting', E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
 
 // allow user deployment settings to always take priority
-include_once "/var/www/elmsln/config/shared/drupal-7.x/settings/shared_settings.php";
+// if there is a custom shared_settings.php, use that instead of the config folder's
+if (file_exists("/var/www/elmsln/custom/shared/drupal-7.x/settings/shared_settings.php")) {
+  include_once "/var/www/elmsln/custom/shared/drupal-7.x/settings/shared_settings.php";
+} else {
+  include_once "/var/www/elmsln/config/shared/drupal-7.x/settings/shared_settings.php";
+}
+
 if (file_exists("/var/www/elmsln/_elmsln_env_config/shared_settings.php")) {
   include_once "/var/www/elmsln/_elmsln_env_config/shared_settings.php";
 }
